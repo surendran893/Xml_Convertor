@@ -5,6 +5,7 @@ from configparser import ConfigParser
 def config(filename='database.ini', section='postgresql'):
     parser = ConfigParser()
 
+    filename = 'C:/WorkSpace/Renault/R_AE/OSM_Data_Generation/Xml_Convertor/database.ini'
     parser.read(filename)
 
     db = {}
