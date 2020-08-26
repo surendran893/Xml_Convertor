@@ -31,3 +31,17 @@ class Database_Connect():
             print('Database connection closed.')
 
         return select_result
+
+    def select_query_with_param(query_val, params):
+        database = Database_Connect()
+        cur, conn = database.connect_database()
+        cur.execute(query_val, params)
+
+        select_result = cur.fetchall()
+
+        if conn is not None:
+            conn.close()
+            print('Database connection closed.')
+
+        return select_result
+
